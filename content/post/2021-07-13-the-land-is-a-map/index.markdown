@@ -5,6 +5,7 @@ date: '2021-07-13'
 slug: [the-land-is-a-map-VOTD]
 categories: [Tableau]
 tags: [Tableau]
+image: "the-land-is-a-map.png"
 ---
 Last week I was fortunate enough to be [awarded my first ever 'Viz of the Day'](https://public.tableau.com/en-us/gallery/land-map-place-names-indigenous-australian-origin?tab=viz-of-the-day&type=viz-of-the-day) (or VOTD). The more expansive (and I think better version) of the visualisation [can be found on my Tableau Public profile](https://public.tableau.com/views/TheLandisaMap-PlacenamesofIndigenousAustralianorigin/TheLandisaMap?:language=en-US&:display_count=n&:origin=viz_share_link "The Land is a Map visualisation"). 
 

@@ -3,6 +3,7 @@ title: An updated Australian international education snapshot dashboard
 author: Darragh Murray
 date: '2021-04-01'
 slug: [updated-international-education-dashboard]
+image: "international-education-dashboard.png"
 categories:
   - Tableau
 tags:

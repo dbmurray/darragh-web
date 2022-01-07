@@ -3,6 +3,7 @@ title: Enter the Tidyverse | Getting back into R through some basic data cleanin
 author: Darragh Murray
 date: '2021-03-01'
 slug: [enter-the-tidyverse]
+image: "enter-the-tidyverse.png"
 categories:
   - R
   - tidyverse
