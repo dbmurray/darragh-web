@@ -196,7 +196,7 @@ menu:
           name: Tableau
           url: https://public.tableau.com/app/profile/darragh.murray
           params:
-            icon: brand-twitter
+            icon: brand-tableau
 
 related:
     includeNewer: true
