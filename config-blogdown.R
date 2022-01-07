@@ -3,3 +3,4 @@ file.edit(".gitignore")
 blogdown::new_post(title = "Hi Hugo", 
                    ext = '.Rmarkdown', 
                    subdir = "post")
+blogdown::serve_site()
