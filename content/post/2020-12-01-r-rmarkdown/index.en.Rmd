@@ -6,6 +6,8 @@ categories: ["R"]
 tags: ["R Markdown", "plot", "regression"]
 ---
 
+This is an edit!
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(collapse = TRUE)
 ```
