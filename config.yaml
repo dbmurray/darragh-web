@@ -1,8 +1,8 @@
-baseurl: https://example.com
+baseurl: https://darraghmurray.netlify.app
 languageCode: en-us
 theme: "hugo-theme-stack"
 paginate: 5
-title: Example Site
+title: Darragh Murray
 
 # Change it to your Disqus shortname before using
 disqusShortname: hugo-theme-stack
