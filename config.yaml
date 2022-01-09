@@ -39,7 +39,7 @@ params:
 
     sidebar:
         #emoji: 🍥
-        subtitle: Data Science | Data Visualisation | Analytics 
+        subtitle: Analytics | Data Visualisation | Data Science 
         avatar:
             enabled: true
             local: true

@@ -1,0 +1,30 @@
+---
+title: 'A Reminder on the Importance of Exploratory Data Analysis: My First B2VB Entry'
+author: ''
+date: '2022-01-09'
+slug: a-reminder-on-the-importance-of-exploratory-data-analysis-my-first-b2vb-entry
+categories: [Tableau, Data Analysis]
+tags: [Tableau, Data Analysis, B2VB]
+description: ~
+image: 'great_coaches.png'
+math: ~
+license: ~
+hidden: no
+comments: yes
+---
+
+```{r echo=FALSE}
+library(readxl)
+winning_coaches <- read_excel("NCAA DI Winningest Active Coaches.xlsx")
+winning_coaches.lm = lm(`Seasons Coaching` ~ `Win Percentage`, data = winning_coaches)
+summary(winning_coaches.lm)
+```
+
+Results in this
+
+```{r echo=TRUE}
+library(readxl)
+winning_coaches <- read_excel("NCAA DI Winningest Active Coaches.xlsx")
+winning_coaches.lm = lm(`Seasons Coaching` ~ `Win Percentage`, data = winning_coaches)
+summary(winning_coaches.lm)
+```
