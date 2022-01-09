@@ -57,11 +57,42 @@ summary(winning_coaches.lm)
 ## F-statistic: 2.773 on 1 and 99 DF,  p-value: 0.09901
 ```
 
-Two key summary statistics immediately jump out - the R<sup>2</sup> value and the p-statistic. 
+Two key summary statistics immediately jump out - the **R-squared value** and the **p-statistic**. 
 
-R-squared, being the measure that shows how much of the variance for a dependent variable (in this case *win%*) that is explained by the independent variable (*seasons coached*). Typically, data modelers would ideally want this value as close to 1 as possible, but in this case we see the value is extremely low at 0.02725. This tells us that there is little relationship between these two variables. 
+R-squared, being the measure that shows how much of the variance for a dependent variable (in this case *win%*) that is explained by the independent variable (*seasons coached*). Typically, data modelers would ideally want this value as close to 1 as possible, but in this case we see the value is extremely low at 0.027. This tells us that there is little relationship between these two variables. 
 
 The p-statistic is also high at 0.09. Typically, to have a statistically significant relationship, we want the p value <0.05 otherwise there is a case that the null hypothesis, that there is no relationship between seasons coached and win %, is a possibility. 
 
 Based on these two statistics, there is a good case for saying that we cannot say there is any meaningful relationship between seasons coached and win percentage.
+
+Looking closer at the data.
+
+A close look at the data and some critical refleciton on what it tells us unveils why any meaningful relationship between these two variables failed to materialise:
+
+* Firstly, the data is *limited* to coaches who have already already have pretty great win percentages. The minimum value in the dataset is 57% with the mean around 64%. These are incredibly high win percetnages in any sport and is our first clue that the dataset we're working with is likely incomplete.
+
+
+```r
+summary(winning_coaches$`Win Percentage`)
+```
+
+```
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##  0.5730  0.6020  0.6300  0.6433  0.6710  0.8170
+```
+
+* Secondly, when you look at the summary statistics for seasons coached, you find similar evidence of the limitations of the data, with the minimum amount of season coached being 5. This again provides evidence that we're dealing with a dataset that makes it difficult to evaluate the core problem provided in the challenge.
+
+
+```r
+summary(winning_coaches$`Seasons Coaching`)
+```
+
+```
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    5.00   10.00   16.00   17.65   23.00   42.00
+```
+
+* Finally, putting these facts together - it *totally makes sense*. Coaches in any sport who are successful at a sporting organisation will likely have more wins than the unsuccessful coaches and higher win %, therefore their careers will be longer (and thus, they coach more seasons). What we are *NOT* seeing in the data is those coaches who performed poorly, had low win percentages and did not coach past a certain number of seasons. 
+
 
