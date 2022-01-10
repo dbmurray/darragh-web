@@ -1,12 +1,12 @@
 ---
 title: 'The importance of exploratory data analysis: Exploring the first B2VB challenge'
-author: ''
+author: 'Darragh Murray'
 date: '2022-01-10'
 slug: the-importance-of-exploratory-data-analysis-exploring-the-first-b2vb-challenge
-categories: [Tableau, Data Analysis, Rstats]
-tags: [Tableau, Data Analysis, B2VB, rstats]
+categories: [Data Analysis, Tableau, Rstats]
+tags: [Data Analysis, Tableau, Rstats, EDA, B2VB]
 description: ~
-image: 'great_coaches.png'
+image: "great_coaches.png"
 math: ~
 license: ~
 hidden: no
@@ -59,7 +59,7 @@ library(readxl)
 library(ggstatsplot)
 
 # DATA IMPORT
-winningest_active_coaches <- read_excel("content/post/2022-01-09-a-reminder-on-the-importance-of-exploratory-data-analysis-my-first-b2vb-entry/NCAA DI Winningest Active Coaches.xlsx")
+winningest_active_coaches <- read_excel("/Users/darraghmurray/OneDrive/R/Projects/darragh-web/content/post/2022-01-10-the-importance-of-exploratory-data-analysis-exploring-the-first-b2vb-challenge/NCAA\ DI\ Winningest\ Active\ Coaches.xlsx")
 
 
 # TIDY DATA
@@ -76,53 +76,3 @@ ggplot(data = winningest_active_coaches) +
   geom_histogram(mapping = aes(x = seasons_coached), binwidth = 5, color="black", fill="lightblue") +
   scale_x_continuous(breaks = seq(0, 40, 5), lim = c(0, 40))
 ```
-
-We were tasked with working with [US college basketball coaching data](https://data.world/back2vizbasics/2020week1-build-a-scatter-plot). Critically, Eric asked us the following: "*The data we are working with comes from the NCAA. We are looking at some Men's Basketball Coaching Records. I'd like to understand if there is a relationship between Seasons Coaching and overall Win Percentage.*"
-
-Given I was on annual leave, I jumped in early in the piece. I quickly ran the dataset through R to check the variables and their relationships to each other, whipped up a basic scatterplot in Tableau and then added a few little bells and whistles and came up with this:
-
-[NCAA Coaching Longevity v Win %](great_coaches_full.png)
-
-* [See the full interactive on Tableau](https://public.tableau.com/app/profile/darragh.murray/viz/MoreThanGamesCoached/GreatCoaches)
-
-In asnswering the core question put to us in the challenge, I concluded **no meaningful relationship*
-
-Why did I conclude this? Well the answer is in the summary statistics from running the data through a basic R linear regression analysis.
-
-```{r echo=TRUE}
-library(readxl)
-winning_coaches <- read_excel("NCAA DI Winningest Active Coaches.xlsx")
-winning_coaches.lm = lm(`Seasons Coaching` ~ `Win Percentage`, data = winning_coaches)
-summary(winning_coaches.lm)
-```
-
-Two key summary statistics immediately jump out - the **R-squared value** and the **p-statistic**. 
-
-R-squared, being the measure that shows how much of the variance for a dependent variable (in this case *win%*) that is explained by the independent variable (*seasons coached*). Typically, data modelers would ideally want this value as close to 1 as possible, but in this case we see the value is extremely low at 0.027. This tells us that there is little relationship between these two variables. 
-
-The p-statistic is also high at 0.09. Typically, to have a statistically significant relationship, we want the p value <0.05 otherwise there is a case that the null hypothesis, that there is no relationship between seasons coached and win %, is a possibility. 
-
-Based on these two statistics, there is a good case for saying that we cannot say there is any meaningful relationship between seasons coached and win percentage.
-
-Looking closer at the data.
-
-A close look at the data and some critical refleciton on what it tells us unveils why any meaningful relationship between these two variables failed to materialise:
-
-* Firstly, the data is *limited* to coaches who have already already have pretty great win percentages. The minimum value in the dataset is 57% with the mean around 64%. These are incredibly high win percetnages in any sport and is our first clue that the dataset we're working with is likely incomplete.
-
-```{r echo=TRUE}
-summary(winning_coaches$`Win Percentage`)
-```
-
-* Secondly, when you look at the summary statistics for seasons coached, you find similar evidence of the limitations of the data, with the minimum amount of season coached being 5. This again provides evidence that we're dealing with a dataset that makes it difficult to evaluate the core problem provided in the challenge.
-
-```{r echo=TRUE}
-summary(winning_coaches$`Seasons Coaching`)
-```
-
-* Finally, putting these facts together - it *totally makes sense*. Coaches in any sport who are successful at a sporting organisation will likely have more wins than the unsuccessful coaches and higher win %, therefore their careers will be longer (and thus, they coach more seasons). What we are *NOT* seeing in the data is those coaches who performed poorly, had low win percentages and did not coach past a certain number of seasons. 
-
-It is tehrefore very arguable that, based on this data, we can conclude that number of seasons a coach participated in leads to higher win %. If we had a full datasets, with the data around the performacne of poorers coaches, we **may** be able to see a relationship between win% and coaching longeivity.
-
-
-
