@@ -96,3 +96,6 @@ summary(winning_coaches$`Seasons Coaching`)
 * Finally, putting these facts together - it *totally makes sense*. Coaches in any sport who are successful at a sporting organisation will likely have more wins than the unsuccessful coaches and higher win %, therefore their careers will be longer (and thus, they coach more seasons). What we are *NOT* seeing in the data is those coaches who performed poorly, had low win percentages and did not coach past a certain number of seasons. 
 
 
+
+
+
