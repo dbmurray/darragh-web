@@ -51,17 +51,17 @@ We don’t have a wide variety of variables to work with in this instance, and t
 
 ## Interrogating the data
 
-So, what do these variables *actually* look like? Let’s look at their distributions starting with *Seasons Coaching*. Here’s a histogram.
+So, what do these variables *actually* look like? Let’s look at their distributions starting with *Season's Coaching*. Here’s a histogram.
 
 
-<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-1-1.png" width="384" />
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-1-1.png" width="672" />
 
 
 We can immediately see that this variable is limited. All the coaches in the data have coached over five seasons. This is quite interesting because it gives rise to another question: *where are all the coaches who coach less than five seasons? Do they limitations impact our approach to the analytics problem?*
 
 With that in mind, let’s turn our mind to the other key variable of interest: *Win Percentage (%)*. Here’s a plot:
 
-
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-1.png" width="672" />
 
 The plot further indicates the limitations of the data. All of the coaches in the dataset have > 0.5% win percentage – which is quite incredible. More key questions: *Where are all the coaches who are not as successful? If 0.5% is the lower limit for being included in the dataset, could there be long-term coaches who have poor win percentages?*
 
@@ -69,13 +69,7 @@ It’s clear that these **limitations** may impact our analysis – after all, h
 
 However, let’s crack on and model the relationship between the two variables of interest: *Season’s Coached* and *Win Percentage*. Here’s these two variables in a linear regression model.
 
-
-
-```
-## `geom_smooth()` using formula 'y ~ x'
-```
-
-<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-1.png" width="672" />
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-3-1.png" width="672" />
 
 Looking closer at the plot, we note a very very slight positive relationship between the two variables which, on face value, may indicate that the longer you coached college basketball the slightly higher your win percentage may be.
 
