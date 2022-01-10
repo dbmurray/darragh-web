@@ -12,6 +12,7 @@ license: ~
 hidden: no
 comments: yes
 ---
+
 I kicked off the year participating in a brand-new data visualisation curated by [Eric Balish](https://twitter.com/ReadySetData). It’s called **‘Back to Viz Basics’**, also known by its hashtag #B2VB. It’s a fortnightly challenge where the data visualisation community – both new and old – come together to practice some core charting skills. [You can read about the initiative here](https://www.thetableaustudentguide.com/vizbasics).
 
 The first ‘official’ challenge was on the theme of the **scatter plot**, a chart type that’s a core communication tool of the data professional. Eric challenged us to analyse some [American college basketball data](https://data.world/back2vizbasics/2020week1-build-a-scatter-plot), specifically on coaching, to sharpen our scatter plot skills. Given I was on holidays, I blasted out a chart analysing win percentage (%) versus coaching longevity (measured in seasons).
@@ -53,29 +54,13 @@ We don’t have a wide variety of variables to work with in this instance, and t
 So, what do these variables *actually* look like? Let’s look at their distributions starting with *Seasons Coaching*. Here’s a histogram.
 
 
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-1-1.png" width="384" />
 
 
 We can immediately see that this variable is limited. All the coaches in the data have coached over five seasons. This is quite interesting because it gives rise to another question: *where are all the coaches who coach less than five seasons? Do they limitations impact our approach to the analytics problem?*
 
 With that in mind, let’s turn our mind to the other key variable of interest: *Win Percentage (%)*. Here’s a plot:
 
-
-```r
-library(tidyverse)
-library(readxl)
-winningest_active_coaches <- read_excel("/Users/darraghmurray/OneDrive/R/Projects/darragh-web/content/post/2022-01-10-the-importance-of-exploratory-data-analysis-exploring-the-first-b2vb-challenge/NCAA_coaches.xlsx")
-
-# Rename variables to easier to use format
-winningest_active_coaches <- rename(winningest_active_coaches, seasons_coached = `Seasons Coaching`, win_percentage = `Win Percentage`)
-
-# CHARTS & TABLES
-# plot seasons coaching
-ggplot(data = winningest_active_coaches) +
-  geom_histogram(mapping = aes(x = seasons_coached), binwidth = 5, color="black", fill="lightblue") +
-  scale_x_continuous(breaks = seq(0, 40, 5), lim = c(0, 40))
-```
-
-<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-1.png" width="672" />
 
 
 The plot further indicates the limitations of the data. All of the coaches in the dataset have > 0.5% win percentage – which is quite incredible. More key questions: *Where are all the coaches who are not as successful? If 0.5% is the lower limit for being included in the dataset, could there be long-term coaches who have poor win percentages?*
@@ -90,7 +75,7 @@ However, let’s crack on and model the relationship between the two variables o
 ## `geom_smooth()` using formula 'y ~ x'
 ```
 
-<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-3-1.png" width="672" />
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-1.png" width="672" />
 
 Looking closer at the plot, we note a very very slight positive relationship between the two variables which, on face value, may indicate that the longer you coached college basketball the slightly higher your win percentage may be.
 
