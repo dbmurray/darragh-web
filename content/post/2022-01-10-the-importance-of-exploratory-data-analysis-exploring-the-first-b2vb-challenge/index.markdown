@@ -22,20 +22,20 @@ Not only was this an exercise in building scatterplots, but it was also fundamen
 
 I’m going to briefly outline my process to answering the B2VB challenge showing why this is, and finish with a small sermon about why dual-use challenges like B2VB are excellent arenas for developing the key skills of the data professional. You’ll see some #rstats thrown in the mix as well.
 
-### The Analytics Problem
+## The Analytics Problem
 
 The task was to examine some NCAA basketball coaching data. Critically, Eric asked us:
 >“I’d like to understand if there is a relationship between ‘Season Coaching’ and ‘Overall Win Percentage.” 
 
 This is what I usually refer to as the analytics problem. It’s the key question that drives both the data analysis and the output of the analysis – in this case, a scatter plot data visualisation.
 
-### The Importance of Exploratory Data Analysis
+## The Importance of Exploratory Data Analysis
 
-Getting an understanding of the data you’re working with is a crucial step to completing any analyses. There are many great commentaries on why this is, but I’ll just leave you with this quote from a great book on doing data science from Hadley Wickham and Garrett Grolemund which neatly sums up its importance:
+Getting an understanding of the data you’re working with is a crucial step to completing any analyses. There are many great commentaries on why this is, but I’ll just leave you with this quote from a great book on doing data science from **Hadley Wickham** and **Garrett Grolemund** which neatly sums up its importance:
 
->“EDA is an important part of any data analysis, even if the questions are handed to you on a platter, because you always need to investigate the quality of your data. Data cleaning is just one application of EDA: you ask questions about whether your data meets your expectations or not. To do data cleaning, you’ll need to deploy all the tools of EDA: visualisation, transformation, and modelling.” ([Source](https://r4ds.had.co.nz/exploratory-data-analysis.html))
+>*“EDA is an important part of any data analysis, even if the questions are handed to you on a platter, because you always need to investigate the quality of your data. Data cleaning is just one application of EDA: you ask questions about whether your data meets your expectations or not. To do data cleaning, you’ll need to deploy all the tools of EDA: visualisation, transformation, and modelling.”* ([Source](https://r4ds.had.co.nz/exploratory-data-analysis.html))
 
-### Variable selection
+## Variable selection
 
 The dataset itself contains 101 observations of six variables.
 
@@ -48,58 +48,35 @@ The dataset itself contains 101 observations of six variables.
 
 We don’t have a wide variety of variables to work with in this instance, and taking the analytics question into account, I decided to primarily work with Win Percentage and Seasons Coaching are they seemed the most relevant to the task at hand. 
 
-### Interrogating the data
+## Interrogating the data
 
 So, what do these variables *actually* look like? Let’s look at their distributions starting with *Seasons Coaching*. Here’s a histogram.
 
 
-```
-## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──
-```
 
-```
-## ✓ ggplot2 3.3.5     ✓ purrr   0.3.4
-## ✓ tibble  3.1.6     ✓ dplyr   1.0.7
-## ✓ tidyr   1.1.4     ✓ stringr 1.4.0
-## ✓ readr   2.1.1     ✓ forcats 0.5.1
-```
-
-```
-## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-## x dplyr::filter() masks stats::filter()
-## x dplyr::lag()    masks stats::lag()
-```
-
-```
-## You can cite this package as:
-##      Patil, I. (2021). Visualizations with statistical details: The 'ggstatsplot' approach.
-##      Journal of Open Source Software, 6(61), 3167, doi:10.21105/joss.03167
-```
-
-```
-## Warning: Removed 2 rows containing non-finite values (stat_bin).
-```
-
-```
-## Warning: Removed 2 rows containing missing values (geom_bar).
-```
-
-<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-1-1.png" width="672" />
 
 We can immediately see that this variable is limited. All the coaches in the data have coached over five seasons. This is quite interesting because it gives rise to another question: *where are all the coaches who coach less than five seasons? Do they limitations impact our approach to the analytics problem?*
 
 With that in mind, let’s turn our mind to the other key variable of interest: *Win Percentage (%)*. Here’s a plot:
 
 
-```
-## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
-```
+```r
+library(tidyverse)
+library(readxl)
+winningest_active_coaches <- read_excel("/Users/darraghmurray/OneDrive/R/Projects/darragh-web/content/post/2022-01-10-the-importance-of-exploratory-data-analysis-exploring-the-first-b2vb-challenge/NCAA_coaches.xlsx")
 
-```
-## Warning: Removed 2 rows containing missing values (geom_bar).
+# Rename variables to easier to use format
+winningest_active_coaches <- rename(winningest_active_coaches, seasons_coached = `Seasons Coaching`, win_percentage = `Win Percentage`)
+
+# CHARTS & TABLES
+# plot seasons coaching
+ggplot(data = winningest_active_coaches) +
+  geom_histogram(mapping = aes(x = seasons_coached), binwidth = 5, color="black", fill="lightblue") +
+  scale_x_continuous(breaks = seq(0, 40, 5), lim = c(0, 40))
 ```
 
 <img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-1.png" width="672" />
+
 
 The plot further indicates the limitations of the data. All of the coaches in the dataset have > 0.5% win percentage – which is quite incredible. More key questions: *Where are all the coaches who are not as successful? If 0.5% is the lower limit for being included in the dataset, could there be long-term coaches who have poor win percentages?*
 
@@ -127,13 +104,13 @@ The p-statistic is also high at 0.09. Typically, to have a statistically signifi
 
 Based on these two statistics, there is a good case for saying that we cannot say there is any meaningful relationship between seasons coached and win percentage.
 
-### Critical consideration
+## Critical consideration
 
 Thinking about the data critically, we shouldn’t be surprised that we can’t really derive a solid relationship between the two variables of interest. It makes a lot of sense that coaches who win a lot of games are likely to keep their jobs and coach for many seasons, whereas on the flip side, those who don’t perform well, would not keep their job. 
 
 And given the limitations we discovered in the dataset, we don’t see the underperformers and therefore its difficult to accurately measure the impact on the coaching longevity on winning percentage and vice versa.
 
-### Visualisation
+## Visualisation
 
 Now with the analysis done, it was time to finish the – as usual I elected to finish the visualisation in Tableau. 
 
@@ -141,7 +118,7 @@ Now with the analysis done, it was time to finish the – as usual I elected to 
 
 * [See the full interactive on Tableau](https://public.tableau.com/app/profile/darragh.murray/viz/MoreThanGamesCoached/GreatCoaches)
 
-### Final Word
+## Final Word
 
 This post was a bit of an extravagance – I did want to check out the markdown functions of my new blog after all by integrating R code into the writing! – but I also wanted to demonstrate a method for looking deeper into a data problem by roughly sketching out a method of exploratory data analysis. 
 
