@@ -85,3 +85,8 @@ So, what do these variables *actually* look like? Let’s look at their distribu
 ```
 
 <img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-1-1.png" width="672" />
+
+We can immediately see that this variable is limited. All the coaches in the data have coached over five seasons. This is quite interesting because it gives rise to another question: *where are all the coaches who coach less than five seasons? Do they limitations impact our approach to the analytics problem?*
+
+With that in mind, let’s turn our mind to the other key variable of interest: *Win Percentage (%)*. Here’s a plot:
+
