@@ -143,9 +143,13 @@ Now with the analysis done, it was time to finish the – as usual I elected to 
 
 ## Final Word
 
-This post was a bit of an extravagance – I did want to check out the markdown functions of my new blog after all by integrating R code into the writing! – but I also wanted to demonstrate a method for looking deeper into a data problem by roughly sketching out a method of exploratory data analysis. 
+The objective of this fairly extravagantly long blog post was to demonstrate the usefulness of exploratory data analysis in the production of data products - particularly visualisations. Often its an iterative process of exploring specific questions (the analytics problems), diving deep into the avialable data (variable selection and data interrogration) and then placing the information uncovered in your analysis in the context (critical consideration). 
 
-Wanted to give a quick shout out again to Eric for this great data initiative. 
+Often many data professionals can do this rapidly without the requiring writing up a 1000+ word essay of their process, but I wanted to detail my own basic framework to give those who may be starting out some idea of what it really takes to do data analysis and data visualisation.
+
+(Full disclosure: I also  did want to check out the markdown functions of my new blog after all by integrating R code into the writing!) 
+
+Thanks again to Eric for B2VB which served as the launch pad for this blog post - B2VB is gonna be a great initiative. 
 
 Here are some other links to content that looks at this first week of BV2B in some extra depth:
 
