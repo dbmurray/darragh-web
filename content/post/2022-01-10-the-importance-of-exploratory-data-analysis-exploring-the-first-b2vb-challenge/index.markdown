@@ -207,9 +207,10 @@ Here are some other links to content that looks at this first week of BV2B in so
 
 * [Branden Kornell has done an indepth blog on his solution](https://www.brandenkornell.com/post/scatterplots-tackling-week-1-of-back-2-viz-basics), noting many of the same things I have above – but you should check it out because his visualisation is excellent. 
 
-
 * [Andy Cotgreave also does a great job of critically analysing the dataset in this video](https://www.linkedin.com/posts/acotgreave_b2vb-activity-6884820726910640128-E7Uz) which is well worth a viewing – along with a scatter plot with marginal distributions overlaid on the axis.
 
-* Finally, you can check out heaps of the visualisations submitted by others for this challenge via Tableau Public - [simply follow the B2VB hashtag to explore!](https://public.tableau.com/en-us/search/vizzes/%23B2VB)
+* You can check out heaps of the visualisations submitted by others for this challenge via Tableau Public - [simply follow the B2VB hashtag to explore!](https://public.tableau.com/en-us/search/vizzes/%23B2VB)
+
+* Finally, if you want the rcode used in doing the data exploration, [I've made it available in this github repo](https://github.com/dbmurray/b2vb_analysis).
 
 If you made it this far – congratulations, it was a tad bit epic – but hopefully you found it useful. A always, feel free to ping me on twitter if you’d like to engage further, and of course, if I’ve made any glaring errors, let me know via that medium as well. 
