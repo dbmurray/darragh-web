@@ -107,8 +107,6 @@ ggplotRegression <- function (fit) {
     geom_point() +
     stat_smooth(method = "lm", col = "orange") +
     labs(title = paste("R-squared = ",signif(summary(fit)$r.squared, 5),
-                       "Intercept =",signif(fit$coef[[1]],5 ),
-                       " Slope =",signif(fit$coef[[2]], 5),
                        " P statistic=",signif(summary(fit)$coef[2,4], 5)))
 }
 
