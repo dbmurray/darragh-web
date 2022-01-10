@@ -113,4 +113,4 @@ Here are some other links to content that looks at this first week of BV2B in so
 
 * Finally, if you want the rcode used in doing the data exploration, [I've made it available in this github repo](https://github.com/dbmurray/b2vb_analysis).
 
-If you made it this far – congratulations, it was a tad bit epic – but hopefully you found it useful. A always, feel free to ping me on twitter if you’d like to engage further, and of course, if I’ve made any glaring errors, let me know via that medium as well. 
+If you made it this far – congratulations, it was a tad bit epic – but hopefully you found it useful. A always, feel free to [ping me on Twitter](https://twitter.com/dbfmurray) if you’d like to engage further, and of course, if I’ve made any glaring errors, let me know via that medium as well. 
