@@ -63,7 +63,7 @@ With that in mind, let’s turn our mind to the other key variable of interest: 
 
 <img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-1.png" width="672" />
 
-The plot further indicates the limitations of the data. All of the coaches in the dataset have > 0.5% win percentage – which is quite incredible. More key questions: *Where are all the coaches who are not as successful? If 0.5% is the lower limit for being included in the dataset, could there be long-term coaches who have poor win percentages?*
+The plot further indicates the limitations of the data. All of the coaches in the dataset have > 50% win percentage – which is quite incredible. More key questions: *Where are all the coaches who are not as successful? If 50% is the lower limit for being included in the dataset, could there be long-term coaches who have poor win percentages?*
 
 It’s clear that these **limitations** may impact our analysis – after all, how can one determine a meaningful relationship between coaching longevity when we seem to be missing data on coaches who perhaps were not quite successful enough to be included in the extract?
 
