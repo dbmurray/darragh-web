@@ -53,11 +53,6 @@ We don’t have a wide variety of variables to work with in this instance, and t
 So, what do these variables *actually* look like? Let’s look at their distributions starting with *Seasons Coaching*. Here’s a histogram.
 
 
-```r
-# LIBRARIES
-library(tidyverse)
-```
-
 ```
 ## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──
 ```
@@ -75,35 +70,10 @@ library(tidyverse)
 ## x dplyr::lag()    masks stats::lag()
 ```
 
-```r
-library(readxl)
-library(ggstatsplot)
-```
-
 ```
 ## You can cite this package as:
 ##      Patil, I. (2021). Visualizations with statistical details: The 'ggstatsplot' approach.
 ##      Journal of Open Source Software, 6(61), 3167, doi:10.21105/joss.03167
-```
-
-```r
-# DATA IMPORT
-winningest_active_coaches <- read_excel("/Users/darraghmurray/OneDrive/R/Projects/darragh-web/content/post/2022-01-10-the-importance-of-exploratory-data-analysis-exploring-the-first-b2vb-challenge/NCAA\ DI\ Winningest\ Active\ Coaches.xlsx")
-
-
-# TIDY DATA
-
-# DATA TRANSFORMATIONS
-
-# Rename variables to easier to use format
-winningest_active_coaches <- rename(winningest_active_coaches, seasons_coached = `Seasons Coaching`,
-                                    win_percentage = `Win Percentage`)
-
-# CHARTS & TABLES
-# plot seasons coaching
-ggplot(data = winningest_active_coaches) +
-  geom_histogram(mapping = aes(x = seasons_coached), binwidth = 5, color="black", fill="lightblue") +
-  scale_x_continuous(breaks = seq(0, 40, 5), lim = c(0, 40))
 ```
 
 ```
@@ -120,13 +90,6 @@ We can immediately see that this variable is limited. All the coaches in the dat
 
 With that in mind, let’s turn our mind to the other key variable of interest: *Win Percentage (%)*. Here’s a plot:
 
-
-```r
-# plot win percentage
-ggplot(data = winningest_active_coaches) +
-  geom_histogram(mapping = aes(x = win_percentage), color="black", fill="lightblue") +
-  scale_x_continuous(breaks = seq(0, 1, 0.1), lim = c(0, 1))
-```
 
 ```
 ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
@@ -145,25 +108,6 @@ It’s clear that these **limitations** may impact our analysis – after all, h
 However, let’s crack on and model the relationship between the two variables of interest: *Season’s Coached* and *Win Percentage*. Here’s these two variables in a linear regression model.
 
 
-
-```r
-# function to plot the regression model
-# (function borrowed from https://sejohnston.com/2012/08/09/a-quick-and-easy-function-to-plot-lm-results-in-r/)
-
-ggplotRegression <- function (fit) {
-  require(ggplot2)
-  ggplot(fit$model, aes_string(x = names(fit$model)[2], y = names(fit$model)[1])) + 
-    geom_point() +
-    stat_smooth(method = "lm", col = "orange") +
-    labs(title = paste("R-squared = ",signif(summary(fit)$r.squared, 5),
-                       "Intercept =",signif(fit$coef[[1]],5 ),
-                       " Slope =",signif(fit$coef[[2]], 5),
-                       " P statistic=",signif(summary(fit)$coef[2,4], 5)))
-}
-
-# run our data through the custom regression plotting function
-ggplotRegression(lm(`win_percentage` ~ `seasons_coached`, data = winningest_active_coaches))
-```
 
 ```
 ## `geom_smooth()` using formula 'y ~ x'
