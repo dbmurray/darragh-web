@@ -15,7 +15,7 @@ comments: yes
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-I kicked off the year participating in a brand-new data visualisation curated by [Eric Balish](https://twitter.com/ReadySetData). It’s called **‘Back to Viz Basics’**, also known by its hashtag #B2VB. It’s a fortnightly challenge where the data visualisation community – both new and old – come together to practice some core charting skills. [You can read about the initiative here](https://www.thetableaustudentguide.com/vizbasics).
+I kicked off the year participating in a brand-new data visualisation curated by [Eric Balash](https://twitter.com/ReadySetData). It’s called **‘Back to Viz Basics’**, also known by its hashtag #B2VB. It’s a fortnightly challenge where the data visualisation community – both new and old – come together to practice some core charting skills. [You can read about the initiative here](https://www.thetableaustudentguide.com/vizbasics).
 
 The first ‘official’ challenge was on the theme of the **scatter plot**, a chart type that’s a core communication tool of the data professional. Eric challenged us to analyse some [American college basketball data](https://data.world/back2vizbasics/2020week1-build-a-scatter-plot), specifically on coaching, to sharpen our scatter plot skills. Given I was on holidays, I blasted out a chart analysing win percentage (%) versus coaching longevity (measured in seasons).
 
