@@ -52,7 +52,7 @@ We don’t have a wide variety of variables to work with in this instance, and t
 
 So, what do these variables *actually* look like? Let’s look at their distributions starting with *Seasons Coaching*. Here’s a histogram.
 
-```{r echo=TRUE}
+```{r echo=FALSE}
 # LIBRARIES
 library(tidyverse)
 library(readxl)
