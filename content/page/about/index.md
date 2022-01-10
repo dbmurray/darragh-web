@@ -18,9 +18,9 @@ Hello there! Thanks for stopping by my little corner of the web. I'm Darragh Mur
 
 I've been working with data in some way, shape or form for over fifteen years. Starting my career in the information systems field, I've spent the last decade working in business intelligence and strategic analytics. 
 
-Nowadays, I work as a data expert at the leading global real estate firm, Jones Lang LaSalle. Before that, I worked for nearly a decade data expert in the international education sector. I’ve also been involved in the music industry, being a freelance music journalist as well as a radio producer for local community radio. [I’ve recently been elected as a Tableau Social Ambassador for 2021](https://www.tableau.com/community/community-leaders/ambassadors). If you're interested in my career, [my LinkedIn profile has all the relevant details](https://www.linkedin.com/in/darraghmurray/).
+Nowadays, I work as a data expert at the leading global real estate firm, Jones Lang LaSalle. Before that, I worked for nearly a decade as a data expert in the international education sector. I’ve also been involved in the music industry, being a freelance music journalist as well as a radio producer for local community radio. I even managed to score a brief gig interning at the United Nations in New York! [I’ve recently been elected as a Tableau Social Ambassador for 2021](https://www.tableau.com/community/community-leaders/ambassadors). If you're interested in my career, [my LinkedIn profile has all the relevant details](https://www.linkedin.com/in/darraghmurray/).
 
-This website functions as a space for my writing about analytics, data visualisation and occasionally other topics that manage to grab my interest. You'll also find content related to my growing portfolio of data visualisation work, as well as various tutorials and 'how to' guides. 
+This website functions as a space for my writing about analytics, data visualisation and occasionally other topics that manage to grab my interest - particularly in the social sciences and humanites. You'll also find content related to my growing portfolio of data visualisation work, as well as various tutorials and 'how to' guides. 
 
 I generally concentrate on subjects such as:
 
@@ -30,7 +30,7 @@ I generally concentrate on subjects such as:
 * Data storytelling as a useful method of exchanging knowledge – mainly using open data.
 * Older posts relate to my past life working in the international education sector as well as my time as a database developer.
 
-I regularly talk and write about the data and analytics and frequently present throughout the world on these topics. I’ve listed my conference appearances below.
+I regularly talk and write about the data and analytics and frequently present throughout the world on these topics. I’ve listed my formal publshing history and conference appearances below.
 
 I have formal tertiary qualifications in information systems, international relations, history and business analytics. 
 
@@ -46,7 +46,7 @@ I regularly present, write and consult on the topics concerning data visualisati
 
 Below is my presentation, publication, teaching and volunteering history.
 
-* 2021, elected as a Tableau Social Ambassador
+* 2021, Tableau Social Ambassador
 * 2020, Tableau Fringe Festival, *Reflections on data viz, anxiety and imposter syndrome* [Link to Youtube recording](https://www.youtube.com/watch?v=kx9nqrDFmLA).
 * 2020, Presenter, *Refuge from the storm: reflections on climate change, refugees and data visualisation*, Brisbane Tableau User Group – September meeting [link to Youtube recording](https://www.youtube.com/watch?v=EoRURhAARys&feature=youtu.be).
 * 2020, Presenter, *Amplify Now: Virtual Refugee Conference*.
