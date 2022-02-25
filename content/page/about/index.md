@@ -18,7 +18,7 @@ Hello there! Thanks for stopping by my little corner of the web. I'm Darragh Mur
 
 I've been working with data in some way, shape or form for over fifteen years. Starting my career in the information systems field, I've spent the last decade working in business intelligence and strategic analytics. 
 
-Nowadays, I work as a data expert at the leading global real estate firm, Jones Lang LaSalle. Before that, I worked for nearly a decade as a data expert in the international education sector. I’ve also been involved in the music industry, being a freelance music journalist as well as a radio producer for local community radio. I even managed to score a brief gig interning at the United Nations in New York! [I’ve recently been elected as a Tableau Social Ambassador for 2021](https://www.tableau.com/community/community-leaders/ambassadors). If you're interested in my career, [my LinkedIn profile has all the relevant details](https://www.linkedin.com/in/darraghmurray/).
+Nowadays, I work as a data expert at the leading global real estate services firm, [Jones Lang LaSalle](https://www.jll.com.au). Before that, I worked for nearly a decade as a data expert in the international education sector. I’ve also been involved in the music industry, being a freelance music journalist as well as a radio producer for local community radio. I even managed to score a brief gig interning at the United Nations in New York! [I’ve recently been elected as a Tableau Social Ambassador for 2021](https://www.tableau.com/community/community-leaders/ambassadors). If you're interested in my career, [my LinkedIn profile has all the relevant details](https://www.linkedin.com/in/darraghmurray/).
 
 This website functions as a space for my writing about analytics, data visualisation and occasionally other topics that manage to grab my interest - particularly in the social sciences and humanites. You'll also find content related to my growing portfolio of data visualisation work, as well as various tutorials and 'how to' guides. 
 
@@ -44,7 +44,7 @@ Darragh
 
 I regularly present, write and consult on the topics concerning data visualisations, business intelligence and analytics.
 
-Below is my presentation, publication, teaching and volunteering history.
+Below is my presentation, publication, teaching and volunteering history (descending order).
 
 * 2021, Tableau Social Ambassador
 * 2020, Tableau Fringe Festival, *Reflections on data viz, anxiety and imposter syndrome* [Link to Youtube recording](https://www.youtube.com/watch?v=kx9nqrDFmLA).
@@ -65,10 +65,13 @@ Below is my presentation, publication, teaching and volunteering history.
 
 ## Formal qualifications
 
-* Graduate Diploma of Business Analytics, Deakin University, 2017.
-* Master of International Studies, University of Queensland, 2010.
-* Bachelor of Arts (History, honours) , University of Queensland, 2007.
+In ascending order since qualification grant:
+
 * Bachelor Information Technology/Bachelor of Arts, University of Queensland, 2003.
-* Tableau Certified Associate, 2021.
+* Bachelor of Arts (History, honours) , University of Queensland, 2007.
+* Master of International Studies, University of Queensland, 2010.
+* Graduate Diploma of Business Analytics, Deakin University, 2017.
 * Tableau Desktop Specialist, 2019.
+* Tableau Certified Associate, 2021.
 * Alteryx Core Certification, 2021.
+* Tableau Certified Data Analyst, 2022.
