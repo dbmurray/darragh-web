@@ -35,7 +35,7 @@ Locate the **Customers** dashboard. It should look like Figure 1 below. Duplicat
 
 Next, open one of the worksheets on the newly created duplicate dashboard. I suggest the worksheet called **CustomerRank**.
 
-## Create a Product List Parameter*
+## Create a Product List Parameter
 
 Our first job is to create a parameter that lists all available products in the dataset. Do this by creating a **string parameter**; allowable values should be set to a list, and the list of values should be sourced from the **Product Name** field within the **Sample - Superstore** dataset. Figure 2 below indicates the ideal parameter set-up. You can call this parameter whatever you want, but I have labelled it *!p.Select Product*.
 
